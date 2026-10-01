@@ -1,0 +1,20 @@
+# Excluded deliverables
+main.tex
+main.pdf
+short_analysis.html
+requirements.txt
+
+# LaTeX by-products
+*.aux
+*.log
+*.out
+*.synctex.gz
+
+# Environment and system files
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store
+
+# Third-party data with redistribution limits (delete this line to include it)
+Vietnam 10-Year Bond Yield Historical Data.csv

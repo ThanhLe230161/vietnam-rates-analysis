@@ -1,0 +1,33 @@
+Series: US 10Y UST
+Sample: 2015-01 to 2026-09 (141 monthly obs)
+Last daily obs: 2026-09-29 = 5.26
+Share of unchanged daily prints since 2025: 6%
+
+Stationarity (ADF H0 = unit root; KPSS H0 = stationary)
+level            ADF p= 0.848 | KPSS p= 0.010 -> non-stationary
+1st difference   ADF p= 0.000 | KPSS p= 0.100 -> stationary
+-> differencing order d = 1
+
+Top 5 ARIMA candidates by AIC:
+ p  d  q        AIC
+ 0  1  1 -74.810084
+ 2  1  0 -73.117971
+ 1  1  0 -72.951001
+ 0  1  2 -72.871682
+ 1  1  1 -72.861415
+-> selected ARIMA(0, 1, 1)
+Residual Ljung-Box(12) p = 0.753 (white noise)
+Out-of-sample 3M-ahead RMSE over last 24 origins: ARIMA 29.5 bp vs random walk 28.8 bp -> ARIMA does NOT beat no-change
+
+6-month forecast (95% CI):
+  2026-10: 5.073  [4.716, 5.431]
+  2026-11: 5.073  [4.471, 5.676]
+  2026-12: 5.073  [4.3, 5.847]
+  2027-01: 5.073  [4.16, 5.987]
+  2027-02: 5.073  [4.039, 6.108]
+  2027-03: 5.073  [3.931, 6.216]
+Point move over horizon: +9.9 bp; 95% CI width at horizon: 228.5 bp
+READ: move is small vs. uncertainty -> ARIMA alone does NOT support a directional call.
+
+Momentum: 3M +50.4 bp | 12M +85.4 bp | 12M z-score +0.75
+Signal: UP-trend; 3M confirms 12M (trend intact)
